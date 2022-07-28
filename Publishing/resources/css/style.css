@@ -1,21 +1,30 @@
+
+html {
+    position: relative;
+}
+
 * {
     padding: 0;
     margin: 0;
 }
 
 header {
-    background-color: rgba(255, 196, 35, 0.382);
+    background-color: rgb(255, 236, 208);
     width: 1700px;
-    height: 160px;
-    position:absolute;
+    height: 130px;
     align-items: center;
 }
 
-#header-sign-in a {
-    text-decoration: none;
-    color: white;
-    float: right;
+#header-sign-in {
     margin-right: 100px;
+}
+
+#header-sign-in a {
+    height: 0px;
+    text-decoration: none;
+    color: black;
+    float: right;
+    margin-right: 30px;
     margin-top: 10px;
 }
 
@@ -60,32 +69,47 @@ header {
 main{
     padding: 0;
     margin: 0;
-    justify-content: center;
-    align-items: center;
-}
-
-#banner{
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
 }
 
 .slider {
-    padding: 0;
-    margin: 0;
-    width: 1700px;
-    height: 700px;
     overflow: hidden;
+    height: 700px;
+    width: 1700px;
+    margin: 0 0;
 }
 
-.slide{
-    padding: 0;
-    margin: 0;
-    width: 100%;
+/*-----SLIDE ANIMATION-------*/
+
+@-webkit-keyframes slide_animation{
+    0%    {left: 0px;}
+    16.6%  {left: 1700px;}
+    33.3% {left: 3400px;}
+    50%     {left: 5100px;}
+    66.6% {left: 3400px;}
+    83.3%  {left: 1700px;}
+    100%    {left: 0px;}
+}
+
+.slide {
+    width: 6800px;
     height: 700px;
-    display: flex;
+    margin: 0 0 0 -5100px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 16s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+.img-container {
+    height: 700px;
+    width: 1700px;
+    position: relative;
+    float: left;
 }
 
 .slide input {
