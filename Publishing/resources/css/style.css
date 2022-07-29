@@ -9,17 +9,20 @@ html {
 }
 
 header {
-    background-color: rgb(184, 110, 0);
+    background-color: #ddd9ff;
     width: 1700px;
-    height: 140px;
-    align-items: center;
-    background-size: cover;
-    margin-left: 100px;
+    height: 145px;
+    background-position: center;
+
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #header-sign-in {
     margin-right: 100px;
     top: 0px;
+    display: flex;
+    justify-content: right;
 }
 
 #header-sign-in a {
@@ -73,91 +76,112 @@ header {
 main{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     position: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.slider {
-    overflow: hidden;
-    height: 700px;
-    width: 1700px;
-    margin: 0 0;
-    margin-left: 100px;
+ul, li {
+    list-style: none;
 }
 
-/*-----SLIDE ANIMATION-------*/
-
-@-webkit-keyframes slide_animation{
-    0%    {left: 0px;}
-    16.6%  {left: 1700px;}
-    33.3% {left: 3400px;}
-    50%     {left: 5100px;}
-    66.6% {left: 3400px;}
-    83.3%  {left: 1700px;}
-    100%    {left: 0px;}
-}
-
-.slide {
-    width: 6800px;
-    height: 700px;
-    margin: 0 0 0 -5100px;
-    position: relative;
-    -webkit-animation-name: slide_animation;
-    -webkit-animation-duration: 16s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
-    -webkit-animation-play-state: running;
-}
-
-.img-container {
-    height: 700px;
-    width: 1700px;
-    position: relative;
-    float: left;
-}
-
-.slide input {
-    padding: 0;
-    margin: 0;
+[name="slide"] {
     display: none;
 }
 
-.nav-m{
-    padding: 0;
-    margin: 0;
+.slidebox {max-width: 1700PX;
+    width: 100%;
+    margin: 0 auto;
+}
+.slidebox img {
+    max-width: 100%;
+}
+
+.slidebox .slidelist {
+    white-space: nowrap;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.slidebox .slideitem {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all ,2s;
+}
+
+.slidebox .slideitem label {
     position: absolute;
-    width: 1700px;
-    margin-top: -40px;
-    justify-content: center;
-    display: flex;
-}
-.m-btn{
-    border: 2px solid rgb(255, 196, 35);
-    padding: 5px;
-    border-radius: 10px;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    border-radius: 50%;
     cursor: pointer;
-    transition: 1s;
 }
 
-.m-btn:not(:last-child){
-    margin-right: 15px;
+label.left {
+    left: 20px;
+    background-color: #ddd9ff6c;
+    background-image: url(/Publishing/resources/img/left.png);
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
 }
 
-.m-btn:hover{
-    background-color: rgb(180, 132, 0);
+label.right {
+    right: 20px;
+    background-color: #ddd9ff6c;
+    background-image: url(/Publishing/resources/img/right.png);
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
 }
 
-#radio1:checked ~.first{
-    margin-left: 0;
+[id="slide1"]:checked ~ .slidelist .slideitem {transform: translateX(0); animation: slide1 16s infinite;}
+[id="slide2"]:checked ~ .slidelist .slideitem {transform: translateX(-100%); animation: slide2 16s infinite;}
+[id="slide3"]:checked ~ .slidelist .slideitem {transform: translateX(-200%); animation: slide3 16s infinite;}
+[id="slide4"]:checked ~ .slidelist .slideitem {transform: translateX(-300%); animation: slide4 16s infinite;}
+
+@keyframes slide1 {
+    0%    {left: 0%;}
+    16.6%  {left: -100%;}
+    33.3% {left: -200%;}
+    50%    {left: -300%;}
+    66.6% {left: -200%;}
+    83.3%  {left: -100%;}
+    100%    {left: 0%;}
 }
 
-#radio2:checked ~.first{
-    margin-left: -100%;
+@keyframes slide2 {
+    0%    {left: 0%;}
+    16.6%  {left: -100%;}
+    33.3% {left: -200%;}
+    50%     {left: -100%;}
+    66.6% {left: 0%;}
+    83.3%  {left: 100%;}
+    100%    {left: 0%;}
 }
 
-#radio3:checked ~.first{
-    margin-left: -200%;
+@keyframes slide3 {
+    0%    {left: 0%;}
+    16.6%  {left: -100%;}
+    33.3% {left: 0%;}
+    50%     {left: 100%;}
+    66.6% {left: 200%;}
+    83.3%  {left: 100%;}
+    100%    {left: 0%;}
 }
 
-
+@keyframes slide4 {
+    0%    {left: 0%;}
+    16.6%  {left: 100%;}
+    33.3% {left: 200%;}
+    50%     {left: 300%;}
+    66.6% {left: 200%;}
+    83.3%  {left: 100%;}
+    100%    {left: 0%;}
+}
