@@ -73,6 +73,8 @@ header {
     margin-right: 30px;
 }
 
+/* 메인 비주얼 부문 */
+
 main{
     padding: 0;
     margin: 0;
@@ -184,4 +186,16 @@ label.right {
     66.6% {left: 200%;}
     83.3%  {left: 100%;}
     100%    {left: 0%;}
+}
+
+/* 메인 집들이 부문 */
+
+#house {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
