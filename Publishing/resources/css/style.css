@@ -9,14 +9,17 @@ html {
 }
 
 header {
-    background-color: rgb(255, 236, 208);
+    background-color: rgb(184, 110, 0);
     width: 1700px;
-    height: 130px;
+    height: 140px;
     align-items: center;
+    background-size: cover;
+    margin-left: 100px;
 }
 
 #header-sign-in {
     margin-right: 100px;
+    top: 0px;
 }
 
 #header-sign-in a {
@@ -38,6 +41,7 @@ header {
 
 .logo {
     margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 #logo-and-nav nav {
@@ -79,6 +83,7 @@ main{
     height: 700px;
     width: 1700px;
     margin: 0 0;
+    margin-left: 100px;
 }
 
 /*-----SLIDE ANIMATION-------*/
@@ -116,20 +121,6 @@ main{
     padding: 0;
     margin: 0;
     display: none;
-}
-
-.banner-itme {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    transition: 2s; 
-}
-
-.banner-itme img {
-    padding: 0;
-    margin: 0;
-    width: 1700px;
-    height: 700px;  
 }
 
 .nav-m{
