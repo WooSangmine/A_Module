@@ -367,6 +367,7 @@ label.right:hover {
     justify-content: center;
     align-items: center;
     box-shadow:  0 0 10px 0 rgba(0, 0, 0, 1);
+    height: 900px;
 }
 
 .pro-h2 {
@@ -476,19 +477,35 @@ label.right:hover {
 
 }
 
-.review1 {
+.review-border1 {
     width: 500px;
     height: 400px;
     border-radius: 10px;
     background-color: #ddd9ff; 
 }
 
+.review1 {
+    margin-top: 50px;
+}
 
-.review2 {
+.review1 p {
+    margin-top: 5px;
+}
+
+
+.review-border2 {
     width: 500px;
     height: 400px;
     border-radius: 10px;
-    background-color: #ddd9ff;
+    background-color: #ddd9ff; 
+}
+
+.review2 {
+    margin-top: 50px;
+}
+
+.review2 p {
+    margin-top: 5px;
 }
 
 .review-btn {
