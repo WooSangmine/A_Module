@@ -360,6 +360,8 @@ label.right:hover {
     margin: 5px;
 }
 
+/* 전문가 부문 */
+
 #pro {
     display: flex;
     background-color: #ddd9ffa1 ;
@@ -466,6 +468,8 @@ label.right:hover {
     background-color:#a19fe7 ;
 }
 
+/* 후기 부문 */
+
 .review-info {
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
@@ -518,6 +522,8 @@ label.right:hover {
 .review-btn h5 {
     font-size: 30px;
 }
+
+/* 푸터  */
 
 footer {
     background-color: #a19fe7;
